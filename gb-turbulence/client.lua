@@ -39,6 +39,9 @@ Citizen.CreateThread(function()
 						else
 							SetHelicopterRollPitchYawMult(veh, turbulence)
 							SetHeliTurbulenceScalar(veh, roll)
+							TaskVehicleTempAction(ped, veh, 7, math.random(300,550)) -- turn left a bit
+							Citizen.Wait(500)
+							TaskVehicleTempAction(ped, veh, 8, math.random(300,550))
 							--SetVehicleGeneratesEngineShockingEvents(veh, CEventShockingHelicopterOverhead) --param not a string thus undefined
 						end
 					end, GetPlayerServerId(ped), license.heli)
@@ -49,6 +52,9 @@ Citizen.CreateThread(function()
 							SetPlaneTurbulenceMultiplier(veh, 0.0)
 						else
 							SetPlaneTurbulenceMultiplier(veh, turbulence)
+							TaskVehicleTempAction(ped, veh, 7, math.random(300,750)) -- turn left a bit
+							Citizen.Wait(500)
+							TaskVehicleTempAction(ped, veh, 8, math.random(300,750))
 							--SetVehicleGeneratesEngineShockingEvents(veh, CEventShockingHelicopterOverhead) --param not a string thus undefined
 						end
 					end, GetPlayerServerId(ped), license.plane)
